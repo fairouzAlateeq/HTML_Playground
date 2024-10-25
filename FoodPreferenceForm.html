@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <title> Food Preference Form</title>
+    </head>
+        <body>
+            <fieldset>
+                <legend> What diet types are you okay with </legend>
+                    <label> 
+                        <input type="checkbox" id="Vegan"> Vegan 
+                    </label>
+                    <br>
+                    <label> 
+                    <input type="checkbox" id="Vegeariab"> Vegetarian
+                </label>
+                <br> 
+                <label> 
+                    <input type="checkbox" id=" Glutenfree"> Glutenfree
+                </label>
+                <br> 
+                <label> 
+                    <input type="checkbox" id="Dairy-free"> Dairy-free
+                </label>
+                <br>
+                <label> 
+                    <input type="checkbox" id="Halal"> Halal meat only
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>What are you feeling today? </legend>
+                <label>
+                    <input type="radio" id="italian"> Italian
+                </label>
+                <label>
+                    <input type="radio" id="Mexican"> Mexican
+                </label>
+                <label>
+                    <input type="radio" id="Asian"> Asian
+                </label>
+                <label>
+                    <input type="radio" id="Mediterranean"> Mediterranean
+                </label>
+            </fieldset>
+            <label> Any specific dietry restrictions?
+                <input type="textArea" id="dietRestriciton" placeholder="Enter here any allergies/restrictions"> 
+            </label>
+            <br>
+            <label> Additional comments or preferences:
+                <input type="textArea" id="commentsOrPreferences" placeholder="Comments/Preferences"> 
+            </label>
+            <br>
+            <label> unavailable items:
+                <input type="textArea" disabled id="unavailable" value="Catfish, Crab"> 
+            </label>
+            <br>
+            <label> What do you wanna calculate the calories of?
+                <br>
+                <textarea id="userInput" rows="10" cols="30" placeholder="Type something here..."></textarea>
+                <br>
+                <button onclick="getInput()">Submit</button>
+            </label>
+            <br>
+            <textarea id="output" rows="10" cols="30" placeholder="Calorie count"></textarea>
+            <script>
+                function getInput(){
+                    const input = document.getElementById('userInput').value;
+                    document.getElementById('output').innerText = `You selected 100 calories and that means you can: drink water from our menu.`;
+                }
+            </script>
+        </body>
+</html>
